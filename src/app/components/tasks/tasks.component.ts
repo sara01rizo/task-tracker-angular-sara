@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.taskService.getTask().subscribe((tasks) => (this.tasks= tasks));
+    this.taskService.getTasks().subscribe((tasks: any) => (this.tasks= tasks));
   }
 
   deleteTask(task: Task) {
